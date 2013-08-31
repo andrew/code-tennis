@@ -1,0 +1,12 @@
+<h1>Listing games</h1>
+
+<ul>
+  <% @games.each do |game| %>
+    <li>
+      <h3><%= link_to game, game.pages_url %></h3>
+      <p>Repo: <%= link_to game.repo_url, game.repo_url %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Game', new_game_path %>
