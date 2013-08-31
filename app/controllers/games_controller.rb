@@ -62,7 +62,7 @@ class GamesController < ApplicationController
   end
 
   def push
-    
+    puts params
   end
 
   private

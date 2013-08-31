@@ -67,7 +67,7 @@ class Game < ActiveRecord::Base
       full_repo_name,
       'web',
       {
-        :url => 'http://something.com/webhook',
+        :url => "http://code-tennis.herokuapp.com/games/#{id}/push",
         :content_type => 'json'
       },
       {
