@@ -55,7 +55,8 @@ class Game < ActiveRecord::Base
   def add_index_page
     client.put("repos/#{full_repo_name}/contents/index.html", 
                 :message => 'Adding index.html', 
-                :content => Base64.strict_encode64(IO.read("lib/index.html")))
+                :content => Base64.strict_encode64(IO.read("lib/index.html")),
+                :branch => 'gh-pages')
   end
 
   def client
