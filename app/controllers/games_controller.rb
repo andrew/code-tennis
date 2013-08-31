@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :push]
 
   # GET /games
   # GET /games.json
@@ -63,6 +63,8 @@ class GamesController < ApplicationController
 
   def push
     puts params
+    @game.toggle_collaborator
+    render :status => :ok
   end
 
   private
