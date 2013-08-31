@@ -57,6 +57,7 @@ GEM
     multipart-post (1.2.0)
     octokit (2.0.0)
       sawyer (~> 0.3.0)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -121,6 +122,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   octokit
+  pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
