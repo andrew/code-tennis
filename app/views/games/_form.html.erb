@@ -1,25 +1,6 @@
-<%= form_for(@game) do |f| %>
-  <% if @game.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
 
-      <ul>
-      <% @game.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :user_one %><br>
-    <%= f.text_field :user_one %>
-  </div>
-  <div class="field">
-    <%= f.label :user_two %><br>
-    <%= f.text_field :user_two %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%=  simple_form_for(@game, :defaults => { :wrapper_html => {:class => 'form-group'}, :input_html => { :class => 'form-control' } }) do |f| %>
+  <%= f.input :user_one, :label => 'Player One', :hint => 'Github Username' %>
+  <%= f.input :user_two, :label => 'Player Two', :hint => 'Github Username' %>
+  <%= f.submit :class => 'btn btn-success' %>
 <% end %>

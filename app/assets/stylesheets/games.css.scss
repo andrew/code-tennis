@@ -1,3 +1,12 @@
-// Place all the styles related to the games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 40px;
+  background-image:image-url('background.jpg');
+  color:#fff;
+}
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
+
+#newgame{
+  margin-top:8px;
+}
